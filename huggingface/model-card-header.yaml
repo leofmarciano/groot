@@ -1,0 +1,41 @@
+# Hugging Face model card metadata for Groot 1 S.
+# When publishing the weights, prepend this block (including the --- lines) to README.md in the model repository.
+---
+license: apache-2.0
+base_model: jhu-clsp/mmBERT-small
+library_name: pytorch
+language:
+  - en
+  - pt
+  - es
+  - fr
+  - de
+  - it
+tags:
+  - decision-model
+  - text-classification
+  - multilingual
+  - routing
+  - calibration
+  - long-context
+  - bend
+datasets:
+  - LocalLLaMA/typed-decisions
+  - ZefanCai/Open-Jev
+  - tasksource/tasksource-jev-typed-decisions
+  - tasksource/procedural-typed-decisions
+  - fancyzhx/ag_news
+  - dair-ai/emotion
+  - mteb/banking77
+  - clinc/clinc_oos
+  - mteb/amazon_massive_scenario
+  - mteb/amazon_massive_intent
+  - facebook/xnli
+  - nilc-nlp/assin2
+  - ruanchaves/b2w-reviews01
+  - ruanchaves/hatebr
+  - google/boolq
+  - ehovy/race
+  - HuggingFaceH4/ultrafeedback_binarized
+  - nvidia/HelpSteer2
+---

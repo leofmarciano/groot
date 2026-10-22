@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use Groot 1, please cite it as below."
+title: "Groot 1: calibrated typed decisions over long context"
+authors:
+  - name: "Marciano Theory SI"
+  - family-names: "Marciano"
+    given-names: "Leonardo"
+license: Apache-2.0
+repository-code: "https://github.com/leofmarciano/groot"
+date-released: "2026-10-22"
+version: "0.1.0"
+keywords:
+  - decision-model
+  - calibration
+  - long-context
+  - bend

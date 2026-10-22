@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "groot1"
+version = "0.1.0"
+description = "Groot 1: open, calibrated typed-decision model with long context and a pure Bend engine, by Marciano Theory SI"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Marciano Theory SI" }]
+keywords = ["decision-model", "system-one", "jev", "calibration", "bend", "typed-decisions"]
+dependencies = [
+  "torch>=2.4",
+  "transformers>=4.48",
+  "safetensors>=0.4",
+  "tokenizers>=0.20",
+  "numpy>=1.26",
+  "pydantic>=2.6",
+  "datasets>=2.20",
+  "accelerate>=0.30",
+  "pyyaml>=6.0",
+  "tqdm>=4.66",
+]
+
+[project.urls]
+Repository = "https://github.com/leofmarciano/groot"
+Issues = "https://github.com/leofmarciano/groot/issues"
+
+[project.optional-dependencies]
+serve = ["fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27"]
+export = ["onnx>=1.16", "onnxruntime>=1.18", "optimum>=1.20"]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[project.scripts]
+groot-train = "groot1.train:main"
+groot-eval = "groot1.evaluate:main"
+groot-serve = "groot1.serve:main"
+groot-export = "groot1.export:main"
+groot-data = "groot1.data:main"
+groot-bench = "groot1.bench:main"
+
+[tool.setuptools.packages.find]
+include = ["groot1*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: multi-process training smoke tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"

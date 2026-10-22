@@ -1,0 +1,500 @@
+{
+  "groot": {
+    "typed_decisions (literal noul)": {
+      "n": 2000,
+      "correct": 1538,
+      "acc": 0.769,
+      "brier": 0.06492313782755567,
+      "p50_ms": 34.33495850185864,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / noul": {
+      "n": 600,
+      "correct": 510,
+      "acc": 0.85,
+      "brier": 0.04758629240873036,
+      "p50_ms": 34.27677651052363,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / choice": {
+      "n": 600,
+      "correct": 445,
+      "acc": 0.7416666666666667,
+      "brier": 0.0797150500328855,
+      "p50_ms": 34.319730002607685,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / score": {
+      "n": 800,
+      "correct": 583,
+      "acc": 0.72875,
+      "brier": 0.06683183773767727,
+      "p50_ms": 34.41112699510995,
+      "skipped": 0
+    },
+    "agnews": {
+      "n": 500,
+      "correct": 471,
+      "acc": 0.942,
+      "brier": 0.12400159980801682,
+      "p50_ms": 33.83109699643683,
+      "skipped": 0
+    },
+    "emotion": {
+      "n": 500,
+      "correct": 474,
+      "acc": 0.948,
+      "brier": 0.07387430430766208,
+      "p50_ms": 33.60601000167662,
+      "skipped": 0
+    },
+    "banking77": {
+      "n": 500,
+      "correct": 430,
+      "acc": 0.86,
+      "brier": 0.20281418119738778,
+      "p50_ms": 33.97169799427502,
+      "skipped": 0
+    },
+    "clinc150": {
+      "n": 500,
+      "correct": 445,
+      "acc": 0.89,
+      "brier": 0.17638662713125108,
+      "p50_ms": 33.798658500018064,
+      "skipped": 0
+    },
+    "assin2": {
+      "n": 500,
+      "correct": 340,
+      "acc": 0.68,
+      "brier": 0.4474721888693972,
+      "p50_ms": 33.66075400117552,
+      "skipped": 0
+    },
+    "hatebr": {
+      "n": 90,
+      "correct": 74,
+      "acc": 0.8222222222222222,
+      "brier": 0.24739623592506182,
+      "p50_ms": 33.4779004988377,
+      "skipped": 0
+    },
+    "boolq": {
+      "n": 500,
+      "correct": 338,
+      "acc": 0.676,
+      "brier": 0.41625847407923056,
+      "p50_ms": 34.49613750126446,
+      "skipped": 0
+    },
+    "typed_decisions": {
+      "n": 2000,
+      "correct": 1504,
+      "acc": 0.752,
+      "brier": 0.07212648926039207,
+      "p50_ms": 34.42584699951112,
+      "skipped": 0
+    },
+    "typed_decisions / choice": {
+      "n": 600,
+      "correct": 445,
+      "acc": 0.7416666666666667,
+      "brier": 0.0797150500328855,
+      "p50_ms": 34.48188049515011,
+      "skipped": 0
+    },
+    "typed_decisions / noul": {
+      "n": 600,
+      "correct": 476,
+      "acc": 0.7933333333333333,
+      "brier": 0.0715974638515184,
+      "p50_ms": 34.461512994312216,
+      "skipped": 0
+    },
+    "typed_decisions / score": {
+      "n": 800,
+      "correct": 583,
+      "acc": 0.72875,
+      "brier": 0.06683183773767727,
+      "p50_ms": 34.37239299819339,
+      "skipped": 0
+    },
+    "massive_pt": {
+      "n": 500,
+      "correct": 442,
+      "acc": 0.884,
+      "brier": 0.17937960972306882,
+      "p50_ms": 34.0103559938143,
+      "skipped": 0
+    },
+    "massive_pt / 18 labels": {
+      "n": 256,
+      "correct": 233,
+      "acc": 0.91015625,
+      "brier": 0.13781178374861053,
+      "p50_ms": 33.87884100811789,
+      "skipped": 0
+    },
+    "massive_pt / 60 labels": {
+      "n": 244,
+      "correct": 209,
+      "acc": 0.8565573770491803,
+      "brier": 0.22299175500774635,
+      "p50_ms": 34.09132399974624,
+      "skipped": 0
+    },
+    "massive_en": {
+      "n": 500,
+      "correct": 459,
+      "acc": 0.918,
+      "brier": 0.13292937545727798,
+      "p50_ms": 33.94281199143734,
+      "skipped": 0
+    },
+    "massive_en / 60 labels": {
+      "n": 267,
+      "correct": 245,
+      "acc": 0.9176029962546817,
+      "brier": 0.14610555295129735,
+      "p50_ms": 34.03636900475249,
+      "skipped": 0
+    },
+    "massive_en / 18 labels": {
+      "n": 233,
+      "correct": 214,
+      "acc": 0.9184549356223176,
+      "brier": 0.11783049395125578,
+      "p50_ms": 33.79892099474091,
+      "skipped": 0
+    }
+  },
+  "julia": {
+    "typed_decisions (literal noul)": {
+      "n": 2000,
+      "correct": 1365,
+      "acc": 0.6825,
+      "brier": 0.3772885015088892,
+      "p50_ms": 17.451564497605432,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / noul": {
+      "n": 600,
+      "correct": 394,
+      "acc": 0.6566666666666666,
+      "brier": 0.3527089636918505,
+      "p50_ms": 17.434494002372958,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / choice": {
+      "n": 600,
+      "correct": 426,
+      "acc": 0.71,
+      "brier": 0.38144219761413756,
+      "p50_ms": 17.412932000297587,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / score": {
+      "n": 800,
+      "correct": 545,
+      "acc": 0.68125,
+      "brier": 0.392607882792732,
+      "p50_ms": 17.488546996901277,
+      "skipped": 0
+    },
+    "agnews": {
+      "n": 500,
+      "correct": 433,
+      "acc": 0.866,
+      "brier": 0.1916137455059558,
+      "p50_ms": 17.098577998694964,
+      "skipped": 0
+    },
+    "emotion": {
+      "n": 500,
+      "correct": 435,
+      "acc": 0.87,
+      "brier": 0.22175977419952617,
+      "p50_ms": 17.39130100031616,
+      "skipped": 0
+    },
+    "banking77": {
+      "n": 0,
+      "skipped": 500,
+      "reason": "77 options > Julia's 20-option native limit"
+    },
+    "clinc150": {
+      "n": 0,
+      "skipped": 500,
+      "reason": "151 options > Julia's 20-option native limit"
+    },
+    "assin2": {
+      "n": 500,
+      "correct": 172,
+      "acc": 0.344,
+      "brier": 1.0048548339587666,
+      "p50_ms": 17.018721999193076,
+      "skipped": 0
+    },
+    "hatebr": {
+      "n": 90,
+      "correct": 56,
+      "acc": 0.6222222222222222,
+      "brier": 0.5649691502161917,
+      "p50_ms": 17.70204649801599,
+      "skipped": 0
+    },
+    "boolq": {
+      "n": 500,
+      "correct": 276,
+      "acc": 0.552,
+      "brier": 0.7384828503828955,
+      "p50_ms": 17.557824990944937,
+      "skipped": 0
+    },
+    "typed_decisions": {
+      "n": 2000,
+      "correct": 1454,
+      "acc": 0.727,
+      "brier": 0.33598302548418923,
+      "p50_ms": 17.221722002432216,
+      "skipped": 0
+    },
+    "typed_decisions / choice": {
+      "n": 600,
+      "correct": 426,
+      "acc": 0.71,
+      "brier": 0.38144219761413756,
+      "p50_ms": 17.281446496781427,
+      "skipped": 0
+    },
+    "typed_decisions / noul": {
+      "n": 600,
+      "correct": 483,
+      "acc": 0.805,
+      "brier": 0.21502404360951724,
+      "p50_ms": 17.181658506160602,
+      "skipped": 0
+    },
+    "typed_decisions / score": {
+      "n": 800,
+      "correct": 545,
+      "acc": 0.68125,
+      "brier": 0.392607882792732,
+      "p50_ms": 17.202324997924734,
+      "skipped": 0
+    },
+    "massive_pt": {
+      "n": 256,
+      "correct": 126,
+      "acc": 0.4921875,
+      "brier": 0.7957728249784567,
+      "p50_ms": 17.56840450252639,
+      "skipped": 244
+    },
+    "massive_pt / 18 labels": {
+      "n": 256,
+      "correct": 126,
+      "acc": 0.4921875,
+      "brier": 0.7957728249784567,
+      "p50_ms": 17.56840450252639,
+      "skipped": 0
+    },
+    "massive_pt / 60 labels": {
+      "n": 0,
+      "skipped": 244,
+      "reason": "60 options > Julia's 20-option native limit"
+    },
+    "massive_en": {
+      "n": 233,
+      "correct": 139,
+      "acc": 0.5965665236051502,
+      "brier": 0.6082912619727678,
+      "p50_ms": 17.544538000947796,
+      "skipped": 267
+    },
+    "massive_en / 60 labels": {
+      "n": 0,
+      "skipped": 267,
+      "reason": "60 options > Julia's 20-option native limit"
+    },
+    "massive_en / 18 labels": {
+      "n": 233,
+      "correct": 139,
+      "acc": 0.5965665236051502,
+      "brier": 0.6082912619727678,
+      "p50_ms": 17.544538000947796,
+      "skipped": 0
+    }
+  },
+  "jev": {
+    "typed_decisions (literal noul)": {
+      "n": 2000,
+      "correct": 1480,
+      "acc": 0.74,
+      "brier": 0.15217698153460057,
+      "p50_ms": 106.33637050341349,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / noul": {
+      "n": 600,
+      "correct": 495,
+      "acc": 0.825,
+      "brier": 0.053849388777920004,
+      "p50_ms": 104.03102450072765,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / choice": {
+      "n": 600,
+      "correct": 425,
+      "acc": 0.7083333333333334,
+      "brier": 0.14404339612961448,
+      "p50_ms": 107.53170550742652,
+      "skipped": 0
+    },
+    "typed_decisions (literal noul) / score": {
+      "n": 800,
+      "correct": 560,
+      "acc": 0.7,
+      "brier": 0.23202286515585052,
+      "p50_ms": 106.6715920023853,
+      "skipped": 0
+    },
+    "agnews": {
+      "n": 500,
+      "correct": 439,
+      "acc": 0.878,
+      "brier": 0.1954644,
+      "p50_ms": 104.00586549803847,
+      "skipped": 0
+    },
+    "emotion": {
+      "n": 500,
+      "correct": 300,
+      "acc": 0.6,
+      "brier": 0.6570218510764207,
+      "p50_ms": 108.1908294945606,
+      "skipped": 0
+    },
+    "banking77": {
+      "n": 500,
+      "correct": 395,
+      "acc": 0.79,
+      "brier": 0.3182444400775431,
+      "p50_ms": 110.32044699823018,
+      "skipped": 0
+    },
+    "clinc150": {
+      "n": 500,
+      "correct": 372,
+      "acc": 0.744,
+      "brier": 0.3707973579022549,
+      "p50_ms": 110.32470499776537,
+      "skipped": 0
+    },
+    "assin2": {
+      "n": 500,
+      "correct": 382,
+      "acc": 0.764,
+      "brier": 0.33001689427609426,
+      "p50_ms": 101.46108549815835,
+      "skipped": 0
+    },
+    "hatebr": {
+      "n": 90,
+      "correct": 78,
+      "acc": 0.8666666666666667,
+      "brier": 0.20318222222222224,
+      "p50_ms": 102.93377800553571,
+      "skipped": 0
+    },
+    "boolq": {
+      "n": 500,
+      "correct": 453,
+      "acc": 0.906,
+      "brier": 0.1484372,
+      "p50_ms": 98.04706950671971,
+      "skipped": 0
+    },
+    "typed_decisions": {
+      "n": 2000,
+      "correct": 1473,
+      "acc": 0.7365,
+      "brier": 0.15633834478232,
+      "p50_ms": 115.2087884984212,
+      "skipped": 0
+    },
+    "typed_decisions / choice": {
+      "n": 600,
+      "correct": 427,
+      "acc": 0.7116666666666667,
+      "brier": 0.14465625890329126,
+      "p50_ms": 115.44928700459423,
+      "skipped": 0
+    },
+    "typed_decisions / noul": {
+      "n": 600,
+      "correct": 486,
+      "acc": 0.81,
+      "brier": 0.06347899017792,
+      "p50_ms": 115.95580750145018,
+      "skipped": 0
+    },
+    "typed_decisions / score": {
+      "n": 800,
+      "correct": 560,
+      "acc": 0.7,
+      "brier": 0.23474442514489155,
+      "p50_ms": 114.6722254998167,
+      "skipped": 0
+    },
+    "massive_pt": {
+      "n": 500,
+      "correct": 369,
+      "acc": 0.738,
+      "brier": 0.36978190584634224,
+      "p50_ms": 116.27438799041556,
+      "skipped": 0
+    },
+    "massive_pt / 18 labels": {
+      "n": 256,
+      "correct": 173,
+      "acc": 0.67578125,
+      "brier": 0.43957258698092033,
+      "p50_ms": 116.10630349605344,
+      "skipped": 0
+    },
+    "massive_pt / 60 labels": {
+      "n": 244,
+      "correct": 196,
+      "acc": 0.8032786885245902,
+      "brier": 0.29655889613137504,
+      "p50_ms": 116.37904599774629,
+      "skipped": 0
+    },
+    "massive_en": {
+      "n": 500,
+      "correct": 379,
+      "acc": 0.758,
+      "brier": 0.3206377378226712,
+      "p50_ms": 117.7332950028358,
+      "skipped": 0
+    },
+    "massive_en / 60 labels": {
+      "n": 267,
+      "correct": 220,
+      "acc": 0.8239700374531835,
+      "brier": 0.23904260369365352,
+      "p50_ms": 117.34579999756534,
+      "skipped": 0
+    },
+    "massive_en / 18 labels": {
+      "n": 233,
+      "correct": 159,
+      "acc": 0.6824034334763949,
+      "brier": 0.4141394580477686,
+      "p50_ms": 118.35596700257156,
+      "skipped": 0
+    }
+  }
+}

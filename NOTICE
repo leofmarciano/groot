@@ -1,0 +1,14 @@
+Groot 1
+Copyright 2026 Marciano Theory SI
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project builds on third-party work:
+
+- mmBERT (jhu-clsp/mmBERT-small, jhu-clsp/mmBERT-base), MIT License,
+  Johns Hopkins University CLSP. Groot 1 checkpoints are fine-tuned from these weights.
+- Hugging Face Transformers, PyTorch, safetensors, tokenizers (Apache-2.0 / BSD-style).
+- Bend (https://bend-lang.com), used to compile the pure-Bend inference engine in bend/.
+
+Training data comes from public datasets, each under its own license (see the
+model card in README.md). Dataset rows are not redistributed in this repository.

@@ -1,0 +1,32 @@
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+.DS_Store
+
+# data, runs and build outputs
+data/
+runs/
+checkpoints/
+export/
+*.onnx
+*.gbw
+!tests/fixtures/parity/model.gbw
+bend/groot/host_api.mjs
+bend/groot/*.gpu
+/groot
+
+# secrets
+*.env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# private notes and deploy scripts
+internal/
