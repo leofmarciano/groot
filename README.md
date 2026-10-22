@@ -16,7 +16,9 @@
   <a href="#from-mmbert-small-to-groot-1">Architecture</a> ·
   <a href="#start-here">Start here</a> ·
   <a href="#reproduce-the-benchmark">Reproduce</a> ·
-  <a href="#limits-and-deployment-notes">Limits</a>
+  <a href="#limits-and-deployment-notes">Limits</a> ·
+  <a href="https://huggingface.co/marcyano/Groot-1-S">🤗 Weights</a> ·
+  <a href="https://github.com/leofmarciano/groot">GitHub</a>
 </p>
 
 Groot 1 is an open **typed-decision model**. It reads a state and answers typed questions about it with full probability distributions. It speaks the System One request format: `choice` among named options, ordinal `score`, and Boolean `noul`. Groot 1 S has 149.3M parameters, reads states of up to 64k tokens in our tests, and ships with a pure [Bend](https://bend-lang.com) implementation of its forward pass.
@@ -151,7 +153,7 @@ state ──► 512-token chunks ──► encoder ──► chunk summaries ─
 [`bend/`](bend/) holds the complete forward pass in [Bend](https://bend-lang.com): kernels, the block-masked encoder, the tree memory and the fusion layers. It parallelizes over chunks and questions with fork/join. It runs as JavaScript through the generated host, or as a native binary on CPU threads and GPU. On the test fixture both paths match PyTorch to within 1e-7.
 
 ```bash
-groot-export bend --model checkpoints/groot-1-s --out groot-1-s.gbw   # flat f32 weights
+groot-export bend --model Groot-1-S --out groot-1-s.gbw   # flat f32 weights
 bend bend/groot/host_api.bend -o bend/groot/host_api.mjs              # JS host
 node bend/groot/parity.mjs                                            # parity vs PyTorch
 bend bend/main.bend -o groot                                          # native binary
@@ -161,13 +163,16 @@ The Python serializer still builds the token request blob. The PyTorch runtime r
 
 ## Start here
 
-Python 3.10+ is required. The weights for Groot 1 S will be published separately; until then, train them with the recipe in this repository.
+Python 3.10+ is required. The [Hugging Face repository](https://huggingface.co/marcyano/Groot-1-S) holds the 569 MiB checkpoint together with the code. Download it and install the package:
 
 ```bash
-git clone https://github.com/leofmarciano/groot.git && cd groot
-python -m pip install -e .            # inference and training
-python -m pip install -e '.[serve]'   # + HTTP server
+python -m pip install huggingface_hub
+python -c "from huggingface_hub import snapshot_download; snapshot_download('marcyano/Groot-1-S', local_dir='Groot-1-S')"
+python -m pip install -e ./Groot-1-S            # inference and training
+python -m pip install -e './Groot-1-S[serve]'   # + HTTP server
 ```
+
+The code alone is also on [GitHub](https://github.com/leofmarciano/groot).
 
 Keep the engine loaded between requests:
 
@@ -175,7 +180,7 @@ Keep the engine loaded between requests:
 from groot1.schema import SystemOneRequest
 from groot1.serve import GrootEngine
 
-engine = GrootEngine("checkpoints/groot-1-s")   # cuda when available, else cpu
+engine = GrootEngine("Groot-1-S")   # cuda when available, else cpu
 
 req = SystemOneRequest(
     state={"ticket": "I can't log in since I reset my password yesterday.", "customer_tier": "gold"},
@@ -210,7 +215,7 @@ The state can be a string or any JSON value. Question names are returned unchang
 Serve the same API over HTTP:
 
 ```bash
-groot-serve --model checkpoints/groot-1-s --port 8000
+groot-serve --model Groot-1-S --port 8000
 curl -s localhost:8000/v1/systemone -H 'content-type: application/json' \
   -d '{"model": "groot-latest", "state": "...", "questions": {"q": {"type": "noul", "instructions": "..."}}}'
 ```
@@ -223,7 +228,7 @@ curl -s localhost:8000/v1/systemone -H 'content-type: application/json' \
 groot-data build --out data/v1                         # public sources, see groot1/data.py
 python scripts/benchmark.py build --test data/v1/test.jsonl --per-source 500 --out bench.jsonl \
     --sources typed_decisions agnews emotion banking77 clinc150 massive_en massive_pt assin2 hatebr boolq
-python scripts/benchmark.py run --rows bench.jsonl --groot checkpoints/groot-1-s \
+python scripts/benchmark.py run --rows bench.jsonl --groot Groot-1-S \
     --julia path/to/Julia-1 --jev --out results.json   # Jev needs TYPESAFE_API_KEY
 python scripts/benchmark.py table --results results.json
 ```

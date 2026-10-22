@@ -27,6 +27,7 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/leofmarciano/groot"
 Issues = "https://github.com/leofmarciano/groot/issues"
+Weights = "https://huggingface.co/marcyano/Groot-1-S"
 
 [project.optional-dependencies]
 serve = ["fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27"]
