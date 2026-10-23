@@ -1,0 +1,585 @@
+{
+ "date": "2026-10-23",
+ "hardware": "1x NVIDIA A10G, BF16",
+ "systems": {
+  "groot-1": {
+   "typed_decisions": {
+    "n": 2000,
+    "correct": 1506,
+    "acc": 0.753,
+    "brier": 0.06566666662162085,
+    "p50_ms": 72.71999699878506,
+    "skipped": 0
+   },
+   "typed_decisions / choice": {
+    "n": 600,
+    "correct": 442,
+    "acc": 0.7366666666666667,
+    "brier": 0.07552279947285309,
+    "p50_ms": 72.72331949207,
+    "skipped": 0
+   },
+   "typed_decisions / noul": {
+    "n": 600,
+    "correct": 482,
+    "acc": 0.8033333333333333,
+    "brier": 0.05326447384281383,
+    "p50_ms": 72.83280050614849,
+    "skipped": 0
+   },
+   "typed_decisions / score": {
+    "n": 800,
+    "correct": 582,
+    "acc": 0.7275,
+    "brier": 0.06757621156730192,
+    "p50_ms": 72.63176199921872,
+    "skipped": 0
+   },
+   "agnews": {
+    "n": 500,
+    "correct": 464,
+    "acc": 0.928,
+    "brier": 0.11629931848128701,
+    "p50_ms": 72.43437301076483,
+    "skipped": 0
+   },
+   "emotion": {
+    "n": 500,
+    "correct": 472,
+    "acc": 0.944,
+    "brier": 0.09072727608532682,
+    "p50_ms": 75.41730349475984,
+    "skipped": 0
+   },
+   "banking77": {
+    "n": 500,
+    "correct": 420,
+    "acc": 0.84,
+    "brier": 0.25387499060214586,
+    "p50_ms": 72.63692301057745,
+    "skipped": 0
+   },
+   "clinc150": {
+    "n": 500,
+    "correct": 423,
+    "acc": 0.846,
+    "brier": 0.22901396013849581,
+    "p50_ms": 75.81577901146375,
+    "skipped": 0
+   },
+   "massive_pt": {
+    "n": 500,
+    "correct": 438,
+    "acc": 0.876,
+    "brier": 0.1775099315837958,
+    "p50_ms": 76.3890550006181,
+    "skipped": 0
+   },
+   "massive_pt / 18 labels": {
+    "n": 256,
+    "correct": 228,
+    "acc": 0.890625,
+    "brier": 0.14723391976924416,
+    "p50_ms": 76.1552914918866,
+    "skipped": 0
+   },
+   "massive_pt / 60 labels": {
+    "n": 244,
+    "correct": 210,
+    "acc": 0.860655737704918,
+    "brier": 0.20927492758594837,
+    "p50_ms": 76.6518214950338,
+    "skipped": 0
+   },
+   "massive_en": {
+    "n": 500,
+    "correct": 452,
+    "acc": 0.904,
+    "brier": 0.13642131009635367,
+    "p50_ms": 76.41601099749096,
+    "skipped": 0
+   },
+   "massive_en / 60 labels": {
+    "n": 267,
+    "correct": 239,
+    "acc": 0.8951310861423221,
+    "brier": 0.15048897447859697,
+    "p50_ms": 76.66166801936924,
+    "skipped": 0
+   },
+   "massive_en / 18 labels": {
+    "n": 233,
+    "correct": 213,
+    "acc": 0.9141630901287554,
+    "brier": 0.12030085348665855,
+    "p50_ms": 76.08990999870002,
+    "skipped": 0
+   },
+   "assin2": {
+    "n": 500,
+    "correct": 351,
+    "acc": 0.702,
+    "brier": 0.39087566135153634,
+    "p50_ms": 76.24405898968689,
+    "skipped": 0
+   },
+   "hatebr": {
+    "n": 90,
+    "correct": 75,
+    "acc": 0.8333333333333334,
+    "brier": 0.22965814824318306,
+    "p50_ms": 75.83051599794999,
+    "skipped": 0
+   },
+   "boolq": {
+    "n": 500,
+    "correct": 360,
+    "acc": 0.72,
+    "brier": 0.3925564382259709,
+    "p50_ms": 75.7161514920881,
+    "skipped": 0
+   },
+   "folha_news": {
+    "n": 400,
+    "correct": 351,
+    "acc": 0.8775,
+    "brier": 0.19195207823426785,
+    "p50_ms": 82.32167149253655,
+    "skipped": 0
+   }
+  },
+  "groot-1-s": {
+   "typed_decisions": {
+    "n": 2000,
+    "correct": 1504,
+    "acc": 0.752,
+    "brier": 0.06772550638416527,
+    "p50_ms": 36.03799249685835,
+    "skipped": 0
+   },
+   "typed_decisions / choice": {
+    "n": 600,
+    "correct": 442,
+    "acc": 0.7366666666666667,
+    "brier": 0.08920985965524117,
+    "p50_ms": 36.07750999799464,
+    "skipped": 0
+   },
+   "typed_decisions / noul": {
+    "n": 600,
+    "correct": 490,
+    "acc": 0.8166666666666667,
+    "brier": 0.04898011863275658,
+    "p50_ms": 36.031087511219084,
+    "skipped": 0
+   },
+   "typed_decisions / score": {
+    "n": 800,
+    "correct": 572,
+    "acc": 0.715,
+    "brier": 0.06567128224441487,
+    "p50_ms": 36.033593001775444,
+    "skipped": 0
+   },
+   "agnews": {
+    "n": 500,
+    "correct": 464,
+    "acc": 0.928,
+    "brier": 0.10773748226525634,
+    "p50_ms": 36.26453999459045,
+    "skipped": 0
+   },
+   "emotion": {
+    "n": 500,
+    "correct": 470,
+    "acc": 0.94,
+    "brier": 0.07224864026454572,
+    "p50_ms": 36.17466500145383,
+    "skipped": 0
+   },
+   "banking77": {
+    "n": 500,
+    "correct": 423,
+    "acc": 0.846,
+    "brier": 0.25155461987307376,
+    "p50_ms": 36.46864000620553,
+    "skipped": 0
+   },
+   "clinc150": {
+    "n": 500,
+    "correct": 436,
+    "acc": 0.872,
+    "brier": 0.2265364831883061,
+    "p50_ms": 36.267909497837536,
+    "skipped": 0
+   },
+   "massive_pt": {
+    "n": 500,
+    "correct": 429,
+    "acc": 0.858,
+    "brier": 0.23046132275966366,
+    "p50_ms": 36.29570749762934,
+    "skipped": 0
+   },
+   "massive_pt / 18 labels": {
+    "n": 256,
+    "correct": 224,
+    "acc": 0.875,
+    "brier": 0.18988965724042298,
+    "p50_ms": 36.133500005234964,
+    "skipped": 0
+   },
+   "massive_pt / 60 labels": {
+    "n": 244,
+    "correct": 205,
+    "acc": 0.8401639344262295,
+    "brier": 0.27302831609132605,
+    "p50_ms": 36.3444810063811,
+    "skipped": 0
+   },
+   "massive_en": {
+    "n": 500,
+    "correct": 451,
+    "acc": 0.902,
+    "brier": 0.16986882331656414,
+    "p50_ms": 36.15786149748601,
+    "skipped": 0
+   },
+   "massive_en / 60 labels": {
+    "n": 267,
+    "correct": 238,
+    "acc": 0.8913857677902621,
+    "brier": 0.19157810367872716,
+    "p50_ms": 36.27221001079306,
+    "skipped": 0
+   },
+   "massive_en / 18 labels": {
+    "n": 233,
+    "correct": 213,
+    "acc": 0.9141630901287554,
+    "brier": 0.14499166513331296,
+    "p50_ms": 36.01391900156159,
+    "skipped": 0
+   },
+   "assin2": {
+    "n": 500,
+    "correct": 350,
+    "acc": 0.7,
+    "brier": 0.3842314445184752,
+    "p50_ms": 36.22384300251724,
+    "skipped": 0
+   },
+   "hatebr": {
+    "n": 90,
+    "correct": 76,
+    "acc": 0.8444444444444444,
+    "brier": 0.22253775902489545,
+    "p50_ms": 36.13012399728177,
+    "skipped": 0
+   },
+   "boolq": {
+    "n": 500,
+    "correct": 345,
+    "acc": 0.69,
+    "brier": 0.38774914017858086,
+    "p50_ms": 37.099503992067184,
+    "skipped": 0
+   },
+   "folha_news": {
+    "n": 400,
+    "correct": 338,
+    "acc": 0.845,
+    "brier": 0.2280842994738157,
+    "p50_ms": 40.27562300325371,
+    "skipped": 0
+   }
+  },
+  "jev-latest": {
+   "agnews": {
+    "n": 500,
+    "correct": 439,
+    "acc": 0.878,
+    "brier": 0.1954644,
+    "p50_ms": 104.00586549803847,
+    "skipped": 0
+   },
+   "emotion": {
+    "n": 500,
+    "correct": 300,
+    "acc": 0.6,
+    "brier": 0.6570218510764207,
+    "p50_ms": 108.1908294945606,
+    "skipped": 0
+   },
+   "banking77": {
+    "n": 500,
+    "correct": 395,
+    "acc": 0.79,
+    "brier": 0.3182444400775431,
+    "p50_ms": 110.32044699823018,
+    "skipped": 0
+   },
+   "clinc150": {
+    "n": 500,
+    "correct": 372,
+    "acc": 0.744,
+    "brier": 0.3707973579022549,
+    "p50_ms": 110.32470499776537,
+    "skipped": 0
+   },
+   "assin2": {
+    "n": 500,
+    "correct": 382,
+    "acc": 0.764,
+    "brier": 0.33001689427609426,
+    "p50_ms": 101.46108549815835,
+    "skipped": 0
+   },
+   "hatebr": {
+    "n": 90,
+    "correct": 78,
+    "acc": 0.8666666666666667,
+    "brier": 0.20318222222222224,
+    "p50_ms": 102.93377800553571,
+    "skipped": 0
+   },
+   "boolq": {
+    "n": 500,
+    "correct": 453,
+    "acc": 0.906,
+    "brier": 0.1484372,
+    "p50_ms": 98.04706950671971,
+    "skipped": 0
+   },
+   "massive_pt": {
+    "n": 500,
+    "correct": 369,
+    "acc": 0.738,
+    "brier": 0.36978190584634224,
+    "p50_ms": 116.27438799041556,
+    "skipped": 0
+   },
+   "massive_pt / 18 labels": {
+    "n": 256,
+    "correct": 173,
+    "acc": 0.67578125,
+    "brier": 0.43957258698092033,
+    "p50_ms": 116.10630349605344,
+    "skipped": 0
+   },
+   "massive_pt / 60 labels": {
+    "n": 244,
+    "correct": 196,
+    "acc": 0.8032786885245902,
+    "brier": 0.29655889613137504,
+    "p50_ms": 116.37904599774629,
+    "skipped": 0
+   },
+   "massive_en": {
+    "n": 500,
+    "correct": 379,
+    "acc": 0.758,
+    "brier": 0.3206377378226712,
+    "p50_ms": 117.7332950028358,
+    "skipped": 0
+   },
+   "massive_en / 60 labels": {
+    "n": 267,
+    "correct": 220,
+    "acc": 0.8239700374531835,
+    "brier": 0.23904260369365352,
+    "p50_ms": 117.34579999756534,
+    "skipped": 0
+   },
+   "massive_en / 18 labels": {
+    "n": 233,
+    "correct": 159,
+    "acc": 0.6824034334763949,
+    "brier": 0.4141394580477686,
+    "p50_ms": 118.35596700257156,
+    "skipped": 0
+   },
+   "typed_decisions": {
+    "n": 2000,
+    "correct": 1473,
+    "acc": 0.7365,
+    "brier": 0.15633834478232,
+    "p50_ms": 115.2087884984212,
+    "skipped": 0
+   },
+   "typed_decisions / choice": {
+    "n": 600,
+    "correct": 427,
+    "acc": 0.7116666666666667,
+    "brier": 0.14465625890329126,
+    "p50_ms": 115.44928700459423,
+    "skipped": 0
+   },
+   "typed_decisions / noul": {
+    "n": 600,
+    "correct": 486,
+    "acc": 0.81,
+    "brier": 0.06347899017792,
+    "p50_ms": 115.95580750145018,
+    "skipped": 0
+   },
+   "typed_decisions / score": {
+    "n": 800,
+    "correct": 560,
+    "acc": 0.7,
+    "brier": 0.23474442514489155,
+    "p50_ms": 114.6722254998167,
+    "skipped": 0
+   },
+   "folha_news": {
+    "n": 400,
+    "correct": 343,
+    "acc": 0.8575,
+    "brier": 0.2146379415365779,
+    "p50_ms": 103.3104004964116,
+    "skipped": 0
+   }
+  },
+  "julia-1": {
+   "agnews": {
+    "n": 500,
+    "correct": 433,
+    "acc": 0.866,
+    "brier": 0.1916137455059558,
+    "p50_ms": 17.098577998694964,
+    "skipped": 0
+   },
+   "emotion": {
+    "n": 500,
+    "correct": 435,
+    "acc": 0.87,
+    "brier": 0.22175977419952617,
+    "p50_ms": 17.39130100031616,
+    "skipped": 0
+   },
+   "banking77": {
+    "n": 0,
+    "skipped": 500,
+    "reason": "77 options > Julia's 20-option native limit"
+   },
+   "clinc150": {
+    "n": 0,
+    "skipped": 500,
+    "reason": "151 options > Julia's 20-option native limit"
+   },
+   "assin2": {
+    "n": 500,
+    "correct": 172,
+    "acc": 0.344,
+    "brier": 1.0048548339587666,
+    "p50_ms": 17.018721999193076,
+    "skipped": 0
+   },
+   "hatebr": {
+    "n": 90,
+    "correct": 56,
+    "acc": 0.6222222222222222,
+    "brier": 0.5649691502161917,
+    "p50_ms": 17.70204649801599,
+    "skipped": 0
+   },
+   "boolq": {
+    "n": 500,
+    "correct": 276,
+    "acc": 0.552,
+    "brier": 0.7384828503828955,
+    "p50_ms": 17.557824990944937,
+    "skipped": 0
+   },
+   "massive_pt": {
+    "n": 256,
+    "correct": 126,
+    "acc": 0.4921875,
+    "brier": 0.7957728249784567,
+    "p50_ms": 17.56840450252639,
+    "skipped": 244
+   },
+   "massive_pt / 18 labels": {
+    "n": 256,
+    "correct": 126,
+    "acc": 0.4921875,
+    "brier": 0.7957728249784567,
+    "p50_ms": 17.56840450252639,
+    "skipped": 0
+   },
+   "massive_pt / 60 labels": {
+    "n": 0,
+    "skipped": 244,
+    "reason": "60 options > Julia's 20-option native limit"
+   },
+   "massive_en": {
+    "n": 233,
+    "correct": 139,
+    "acc": 0.5965665236051502,
+    "brier": 0.6082912619727678,
+    "p50_ms": 17.544538000947796,
+    "skipped": 267
+   },
+   "massive_en / 60 labels": {
+    "n": 0,
+    "skipped": 267,
+    "reason": "60 options > Julia's 20-option native limit"
+   },
+   "massive_en / 18 labels": {
+    "n": 233,
+    "correct": 139,
+    "acc": 0.5965665236051502,
+    "brier": 0.6082912619727678,
+    "p50_ms": 17.544538000947796,
+    "skipped": 0
+   },
+   "typed_decisions": {
+    "n": 2000,
+    "correct": 1454,
+    "acc": 0.727,
+    "brier": 0.33598302548418923,
+    "p50_ms": 17.221722002432216,
+    "skipped": 0
+   },
+   "typed_decisions / choice": {
+    "n": 600,
+    "correct": 426,
+    "acc": 0.71,
+    "brier": 0.38144219761413756,
+    "p50_ms": 17.281446496781427,
+    "skipped": 0
+   },
+   "typed_decisions / noul": {
+    "n": 600,
+    "correct": 483,
+    "acc": 0.805,
+    "brier": 0.21502404360951724,
+    "p50_ms": 17.181658506160602,
+    "skipped": 0
+   },
+   "typed_decisions / score": {
+    "n": 800,
+    "correct": 545,
+    "acc": 0.68125,
+    "brier": 0.392607882792732,
+    "p50_ms": 17.202324997924734,
+    "skipped": 0
+   },
+   "folha_news": {
+    "n": 400,
+    "correct": 198,
+    "acc": 0.495,
+    "brier": 0.7682641988229524,
+    "p50_ms": 18.400310502329376,
+    "skipped": 0
+   }
+  }
+ },
+ "members": {
+  "groot-1": [
+   "groot-1-s variant zs3b/step_500 (149.3M)",
+   "groot-1-m m2/step_800 (333M)"
+  ]
+ },
+ "notes": "groot-1-s v1.0 (2026-10-22 release) scored 0.3375 on folha_news; fixed in v1.1."
+}

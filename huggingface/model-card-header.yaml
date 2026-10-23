@@ -1,8 +1,10 @@
-# Hugging Face model card metadata for Groot 1 S.
+# Hugging Face model card metadata for Groot 1 and Groot 1 S.
 # When publishing the weights, prepend this block (including the --- lines) to README.md in the model repository.
 ---
 license: apache-2.0
-base_model: jhu-clsp/mmBERT-small
+base_model:
+  - jhu-clsp/mmBERT-small
+  - jhu-clsp/mmBERT-base
 library_name: pytorch
 language:
   - en
@@ -38,4 +40,14 @@ datasets:
   - ehovy/race
   - HuggingFaceH4/ultrafeedback_binarized
   - nvidia/HelpSteer2
+  - HuggingFaceFW/fineweb-2
+  - fancyzhx/dbpedia_14
+  - community-datasets/yahoo_answers_topics
+  - heegyu/news-category-dataset
+  - dstefa/New_York_Times_Topics
+  - SetFit/20_newsgroups
+  - SetFit/bbc-news
+  - Davlan/sib200
+  - celsowm/cnn_news_ptbr
+  - celsowm/bbc_news_ptbr
 ---

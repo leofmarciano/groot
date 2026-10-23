@@ -11,6 +11,9 @@ Request handling: the state is encoded once; every option of every question
 is encoded pointwise in one batched encoder pass; the questions are then
 decided in one batched fusion pass. The `Groot-Extended: true` header adds an
 `x_groot` field with the correctness estimate per question.
+
+A checkpoint directory holding `ensemble.json` ({"members": [dir, ...], "weights": [...]},
+member paths relative to it) is served as a probability-averaged ensemble of its members.
 """
 from __future__ import annotations
 
@@ -43,6 +46,17 @@ class GrootEngine:
         from transformers import AutoTokenizer
 
         self.device = torch.device(device or ("cuda" if torch.cuda.is_available() else "cpu"))
+        spec = Path(checkpoint) / "ensemble.json"
+        if spec.exists():
+            ens = json.loads(spec.read_text())
+            self.members = [GrootEngine(Path(checkpoint) / m, device, None, overrides) for m in ens["members"]]
+            w = ens.get("weights") or [1.0] * len(self.members)
+            self.weights = [x / sum(w) for x in w]
+            self.cfg = self.members[0].cfg
+            self.name = model_name or ens.get("name") or self.cfg.name
+            self.aliases = {"groot-latest": self.name, self.name: self.name, "jev-latest": self.name}
+            return
+        self.members = []
         self.model = GrootDecisionModel.from_pretrained(checkpoint, device=self.device)
         self.tok = AutoTokenizer.from_pretrained(Path(checkpoint) / "tokenizer")
         if overrides:
@@ -56,20 +70,28 @@ class GrootEngine:
 
     # -------------------------------------------------------------- core
     @torch.inference_mode()
-    def answer(self, state: Any, questions: dict[str, Question], extended: bool = False) -> SystemOneResponse:
+    def forward(self, state: Any, questions: dict[str, Question]) -> tuple[list[list[float]], list[dict], Usage]:
+        """Per-question option probabilities, extras and usage (averaged over members for an ensemble)."""
+        if self.members:
+            outs = [m.forward(state, questions) for m in self.members]
+            probs = [[sum(w * o[0][qi][j] for w, o in zip(self.weights, outs)) for j in range(len(outs[0][0][qi]))] for qi in range(len(questions))]
+            extra = [{**outs[0][1][qi], "p_correct": sum(w * o[1][qi]["p_correct"] for w, o in zip(self.weights, outs))} for qi in range(len(questions))]
+            return probs, extra, outs[0][2]
         enc = self.ser.encode_request(state, questions)
         batch = collate([enc.state], enc.questions, self.ser.pad, [0] * len(enc.questions)).to(self.device)
         with torch.autocast(device_type=self.device.type, dtype=torch.bfloat16, enabled=self.device.type == "cuda"):
             out = self.model(batch)
         probs = out["probabilities"].float().cpu()
         conf = torch.sigmoid(out["confidence_logit"].float()).cpu().tolist()
-        answers, extra = {}, {}
-        for qi, (name, question) in enumerate(questions.items()):
-            k = enc.questions[qi].n_options
-            answers[name] = build_answer(question, probs[qi, :k].tolist())
-            extra[name] = {"p_correct": float(conf[qi]), "truncated": enc.questions[qi].truncated}
-        usage = Usage(input_tokens=enc.input_tokens, output_tokens=enc.output_tokens)
-        return SystemOneResponse(model=self.name, answers=answers, usage=usage, x_groot=extra if extended else None)
+        ks = [q.n_options for q in enc.questions]
+        extra = [{"p_correct": float(conf[qi]), "truncated": enc.questions[qi].truncated} for qi in range(len(ks))]
+        return [probs[qi, :k].tolist() for qi, k in enumerate(ks)], extra, Usage(input_tokens=enc.input_tokens, output_tokens=enc.output_tokens)
+
+    def answer(self, state: Any, questions: dict[str, Question], extended: bool = False) -> SystemOneResponse:
+        probs, extra, usage = self.forward(state, questions)
+        answers = {name: build_answer(question, probs[qi]) for qi, (name, question) in enumerate(questions.items())}
+        x = {name: extra[qi] for qi, name in enumerate(questions)}
+        return SystemOneResponse(model=self.name, answers=answers, usage=usage, x_groot=x if extended else None)
 
     def metadata(self) -> list[ModelMetadata]:
         return [

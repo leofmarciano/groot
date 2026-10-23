@@ -7,8 +7,8 @@ authors:
     given-names: "Leonardo"
 license: Apache-2.0
 repository-code: "https://github.com/leofmarciano/groot"
-date-released: "2026-10-22"
-version: "0.1.0"
+date-released: "2026-10-23"
+version: "0.1.1"
 keywords:
   - decision-model
   - calibration

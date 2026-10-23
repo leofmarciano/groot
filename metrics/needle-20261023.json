@@ -1,0 +1,103 @@
+{
+ "date": "2026-10-23",
+ "protocol": "100 needle questions per state length; needle names and templates disjoint from training; single question per request; Groot BF16 on one NVIDIA A10G with state_retrieval=true; Jev via api.typesafe.ai from AWS us-east-2 (includes network)",
+ "per_length": 100,
+ "systems": {
+  "groot-1": {
+   "1000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 84.8,
+    "errors": 0
+   },
+   "4000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 127.5,
+    "errors": 0
+   },
+   "16000": {
+    "n": 100,
+    "acc": 0.98,
+    "p50_ms": 312.8,
+    "errors": 0
+   },
+   "32000": {
+    "n": 100,
+    "acc": 0.98,
+    "p50_ms": 615.6,
+    "errors": 0
+   },
+   "64000": {
+    "n": 100,
+    "acc": 0.96,
+    "p50_ms": 1180.4,
+    "errors": 0
+   }
+  },
+  "groot-1-s": {
+   "1000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 40.0,
+    "errors": 0
+   },
+   "4000": {
+    "n": 100,
+    "acc": 0.99,
+    "p50_ms": 53.0,
+    "errors": 0
+   },
+   "16000": {
+    "n": 100,
+    "acc": 0.98,
+    "p50_ms": 119.9,
+    "errors": 0
+   },
+   "32000": {
+    "n": 100,
+    "acc": 0.99,
+    "p50_ms": 238.6,
+    "errors": 0
+   },
+   "64000": {
+    "n": 100,
+    "acc": 0.96,
+    "p50_ms": 450.5,
+    "errors": 0
+   }
+  },
+  "jev-latest": {
+   "1000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 78.2,
+    "errors": 0
+   },
+   "4000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 86.1,
+    "errors": 0
+   },
+   "16000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 127.6,
+    "errors": 0
+   },
+   "32000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 188.9,
+    "errors": 0
+   },
+   "64000": {
+    "n": 100,
+    "acc": 1.0,
+    "p50_ms": 359.6,
+    "errors": 0
+   }
+  }
+ }
+}

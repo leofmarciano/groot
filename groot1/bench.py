@@ -70,7 +70,7 @@ def main(argv: list[str] | None = None) -> None:
     rows = []
     for words, nq in grid:
         req = synthetic_request(words, nq)
-        enc = engine.ser.encode_request(req.state, req.questions)
+        enc = (engine.members[0] if engine.members else engine).ser.encode_request(req.state, req.questions)
         res = time_fn(lambda: engine.answer(req.state, req.questions), runs=args.runs)
         row = {"state_tokens": enc.state.tokens, "chunks": len(enc.state.chunks), "questions": nq, **{f"groot_{k}": v for k, v in res.items()}}
         if args.jev and os.environ.get("TYPESAFE_API_KEY"):

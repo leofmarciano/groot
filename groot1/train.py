@@ -368,6 +368,7 @@ def main(argv: list[str] | None = None) -> None:
     ap.add_argument("--max-tokens", type=int, default=None, help="padded question tokens per batch (rows * Lmax)")
     ap.add_argument("--max-attn", type=float, default=None, help="padded attention budget per batch (rows * Lmax^2)")
     ap.add_argument("--max-state-chunks", type=int, default=8, help="truncate states to N chunks during training")
+    ap.add_argument("--save-every-eval", action="store_true", help="also save out/step_N at every evaluation")
     ap.add_argument("--spike-factor", type=float, default=1.8, help="rollback when fast loss EMA > factor * best slow EMA")
     ap.add_argument("--max-rollbacks", type=int, default=3)
     ap.add_argument("--chunk-pos", choices=["learned", "sinusoidal"], default=None, help="override the chunk-position scheme")
@@ -534,6 +535,8 @@ def main(argv: list[str] | None = None) -> None:
                     if report["accuracy"].get("all", -1) > best:
                         best = report["accuracy"]["all"]
                         model.save_pretrained(out / "best", tokenizer=tok)
+                    if args.save_every_eval:  # keep every evaluated checkpoint for external model selection
+                        model.save_pretrained(out / f"step_{step}", tokenizer=tok)
                 barrier(world)
             want_ckpt = step % args.save_every == 0 or (time.time() - last_ckpt) > args.ckpt_minutes * 60
             if world > 1:

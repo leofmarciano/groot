@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "groot1"
-version = "0.1.0"
+version = "0.1.1"
 description = "Groot 1: open, calibrated typed-decision model with long context and a pure Bend engine, by Marciano Theory SI"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -27,7 +27,7 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/leofmarciano/groot"
 Issues = "https://github.com/leofmarciano/groot/issues"
-Weights = "https://huggingface.co/marcyano/Groot-1-S"
+Weights = "https://huggingface.co/marcyano/Groot-1"
 
 [project.optional-dependencies]
 serve = ["fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27"]

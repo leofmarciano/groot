@@ -6,6 +6,6 @@ System One contract (POST /v1/systemone) and ships a Bend-native decision
 engine (see the `bend/` directory).
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 __model_family__ = "Groot"
 __organization__ = "Marciano Theory SI"
